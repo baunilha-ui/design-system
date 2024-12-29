@@ -1,0 +1,29 @@
+import { Meta, Controls } from '@storybook/blocks';
+import { ColorsGrid } from '../../components/ColorsGrid';
+import { theme } from '@baunilha/tokens'
+
+ 
+<Meta title="Colors/Primary" />
+ 
+# Primary Colors
+
+### Base Colors
+<ColorsGrid colors={theme.colors.primary.base} prefix='--colors-primary-base' />
+
+### Brand Colors
+<ColorsGrid colors={theme.colors.primary.brand} prefix='--colors-primary-brand' />
+
+### Light Gray Colors
+<ColorsGrid colors={theme.colors.primary.lightGray} prefix='--colors-primary-light-gray'/>
+
+### Dark Gray Colors
+<ColorsGrid colors={theme.colors.primary.darkGray} prefix='--colors-primary-dark-gray'/>
+
+### Error Colors
+<ColorsGrid colors={theme.colors.primary.error} prefix='--colors-primary-error'/>
+
+### Warning Colors
+<ColorsGrid colors={theme.colors.primary.warning} prefix='--colors-primary-warning'/>
+
+### Success Colors
+<ColorsGrid colors={theme.colors.primary.success} prefix='--colors-primary-success'/>

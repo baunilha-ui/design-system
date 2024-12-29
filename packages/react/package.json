@@ -1,0 +1,28 @@
+{
+  "name": "@baunilha/react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "_build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+    "_dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint src/**/*.ts* --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@baunilha/eslint-config": "*",
+    "@baunilha/tokens": "*",
+    "@baunilha/ts-config": "*",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "react": "^19.0.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}
