@@ -1,9 +1,7 @@
-import React from 'react'
+export type { ButtonProps } from './components/Button/Button'
+export { Button } from './components/Button/Button'
 
-type ButtonProps = {
-  children: React.ReactNode
-}
+export type { Theme } from '@baunilha/tokens'
+export { getDarkTheme, getLightTheme } from '@baunilha/tokens'
 
-export const Button = ({ children }: ButtonProps) => {
-  return <button style={{ color: 'red' }}>{children}</button>
-}
+export type { BaunilhaConfig } from './types/baunilha-config'

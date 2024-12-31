@@ -1,10 +1,12 @@
 import { Meta, Controls } from '@storybook/blocks';
 import { TokensGrid } from '../../components/TokensGrid';
-import { theme } from '@baunilha/tokens'
+import { theme } from '../../tokens/tokens';
 
  
 <Meta title="Tokens/Space" />
  
 # Space
+
+1rem = 10px
 
 <TokensGrid tokens={theme.space} prefix='--space'/>

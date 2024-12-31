@@ -1,6 +1,8 @@
 import { Meta, Controls } from '@storybook/blocks';
+import { createCSSVariables } from '@baunilha/tokens';
 import { ColorsGrid } from '../../../components/ColorsGrid';
-import { theme } from '@baunilha/tokens'
+import { theme } from '../../../tokens/tokens';
+
 
  
 <Meta title="Colors/Light/Components" />
@@ -8,11 +10,11 @@ import { theme } from '@baunilha/tokens'
 # Component Colors
 
 ### Button
-In Progress
+<ColorsGrid colors={createCSSVariables(theme.colors.light.components.button, 'button')} prefix='--colors-components' />
 
 ### Button Link
-In Progress
+<ColorsGrid colors={createCSSVariables(theme.colors.light.components.buttonLink, 'button-link')} prefix='--colors-components' />
 
 ### Toggle
-In Progress
+<ColorsGrid colors={createCSSVariables(theme.colors.light.components.toggle, 'toggle')} prefix='--colors-components' />
 

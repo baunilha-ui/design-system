@@ -5,7 +5,7 @@ export const mapRawToRem = <
   raw: Raw,
 ): Rem => {
   return Object.keys(raw).reduce((acc, key) => {
-    const value = raw[key]
+    const value = raw[key] / 10
     return { ...acc, [key]: `${value}rem` }
   }, {} as Rem)
 }

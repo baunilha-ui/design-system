@@ -1,10 +1,12 @@
 import { Meta, Controls } from '@storybook/blocks';
 import { TokensGrid } from '../../components/TokensGrid';
-import { theme } from '@baunilha/tokens'
+import { theme } from '../../tokens/tokens';
 
  
 <Meta title="Tokens/Font Size" />
  
 # Font Size
+
+1rem = 10px
 
 <TokensGrid tokens={theme.fontSize} prefix='--font-size'/>

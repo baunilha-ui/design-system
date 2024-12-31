@@ -12,6 +12,7 @@ import { mapRawToRem } from '../mappers/map-raw-to-rem'
 import { Theme } from './types'
 import { DeepPartial } from '../types/utils'
 import { theme } from './theme'
+import { space } from '../base/spaces/space'
 
 export type CustomTheme = DeepPartial<BaseTheme> & {
   colors?: DeepPartial<BaseTheme['colors']> & {
@@ -34,9 +35,10 @@ type CreateThemeParams = {
   options?: Options
 }
 
-export const createTheme = (params?: CreateThemeParams): Theme => {
-  const { customTheme, options } = params || {}
-
+export const createTheme = ({
+  customTheme,
+  options,
+}: CreateThemeParams = {}): Theme => {
   const mergedTheme = merge(baseTheme, customTheme || {})
 
   const customLightTheme = customTheme?.colors?.light || {}
