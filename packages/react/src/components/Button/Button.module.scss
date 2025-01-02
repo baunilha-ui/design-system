@@ -1,8 +1,53 @@
 .button {
-    border: none;
-    outline: none;
+  position: relative;
+  border: none;
+  outline: none;
+  cursor: pointer;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-weight: 600;
+  font-style: normal;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: var(--radii-2);
+
+  transition: background-color 0.18s, color .18s, box-shadow .18s;
+  will-change: background-color, color, box-shadow;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 1;
+    z-index: -1;
+
+    border-radius: calc(var(--radii-2));
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: transparent;
+
+    transition:
+      opacity 0.18s,
+      inset 0.18s, border-color .18s, border-radius .18s;
+    will-change: opacity, inset, border-color, border-radius;
+  }
+
+  &:focus::after {
+    inset: -3px !important;
+    opacity: 1;
+    border-radius: calc(var(--radii-2) + 3px);
+    border-color: var(--colors-primary-brand-500);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: var(--colors-background-disabled);
+    color: var(--colors-foreground-disabled);
+
+    box-shadow:
+      0px 0px 0px 1px var(--colors-border-disabled_subtle) inset,
+      0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+  }
 }

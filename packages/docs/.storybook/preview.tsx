@@ -1,9 +1,9 @@
 import React from "react";
 import type { Preview } from "@storybook/react";
-import { themes } from "@storybook/theming";
-import "../src/tokens/tokens.scss"
-// import "@baunilha/react/dist/index.css"
+import { themes, ensure } from "@storybook/theming";
+import "../src/tokens/tokens.scss";
 
+import { DocsContainer } from "@storybook/blocks";
 
 const preview: Preview = {
   globalTypes: {
@@ -21,7 +21,7 @@ const preview: Preview = {
     theme: "dark",
   },
   parameters: {
-    layout: "centered",
+    // layout: "centered",
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -32,7 +32,7 @@ const preview: Preview = {
       disable: true,
     },
     docs: {
-      theme: themes.dark,
+      theme: themes.dark
     },
   },
   decorators: [
@@ -40,8 +40,7 @@ const preview: Preview = {
       const theme = context.globals.theme;
 
       document.body.style.backgroundColor =
-        theme === 'dark' ? '#333333' : '#ffffff';
-
+        theme === "dark" ? "#333333" : "#ffffff";
 
       document.documentElement.classList.remove("light");
       document.documentElement.classList.remove("dark");

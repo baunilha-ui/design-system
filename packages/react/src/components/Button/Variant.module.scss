@@ -1,0 +1,109 @@
+.variant-primary {
+  background-color: var(--colors-components-button-primary-background-default);
+  color: var(--colors-components-button-primary-foreground-default);
+
+  box-shadow:
+    0px 0px 0px 1px var(--colors-components-button-primary-border-default) inset,
+    0px 0px 0px 2px rgba(255, 255, 255, 0.04) inset,
+    0px -2px 0px 0px rgba(10, 13, 18, 0.05) inset,
+    0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+
+  &:hover:not(:disabled) {
+    background-color: var(--colors-components-button-primary-background-hover);
+    color: var(--colors-components-button-primary-foreground-hover);
+  }
+}
+
+.variant-secondary {
+  background-color: var(
+    --colors-components-button-secondary-background-default
+  );
+  color: var(--colors-components-button-secondary-foreground-default);
+
+  box-shadow:
+    0px 0px 0px 1px var(--colors-components-button-secondary-border-default)
+      inset,
+    0px 0px 0px 2px rgba(255, 255, 255, 0.04) inset,
+    0px -2px 0px 0px rgba(10, 13, 18, 0.05) inset,
+    0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+
+  &:hover:not(:disabled) {
+    background-color: var(
+      --colors-components-button-secondary-background-hover
+    );
+    color: var(--colors-components-button-secondary-foreground-hover);
+
+    box-shadow:
+      0px 0px 0px 1px var(--colors-components-button-secondary-border-hover)
+        inset,
+      0px 0px 0px 2px rgba(255, 255, 255, 0.04) inset,
+      0px -2px 0px 0px rgba(10, 13, 18, 0.05) inset,
+      0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+  }
+}
+
+.variant-secondary-color {
+  background-color: var(
+    --colors-components-button-secondary-color-background-default
+  );
+  color: var(--colors-components-button-secondary-color-foreground-default);
+
+  box-shadow:
+    0px 0px 0px 1px
+      var(--colors-components-button-secondary-color-border-default) inset,
+    0px 0px 0px 2px rgba(255, 255, 255, 0.04) inset,
+    0px -2px 0px 0px rgba(10, 13, 18, 0.05) inset,
+    0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+
+  &:hover:not(:disabled) {
+    background-color: var(
+      --colors-components-button-secondary-color-background-hover
+    );
+    color: var(--colors-components-button-secondary-color-foreground-hover);
+
+    box-shadow:
+      0px 0px 0px 1px
+        var(--colors-components-button-secondary-color-border-hover) inset,
+      0px 0px 0px 2px rgba(255, 255, 255, 0.04) inset,
+      0px -2px 0px 0px rgba(10, 13, 18, 0.05) inset,
+      0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+  }
+}
+
+.variant-tertiary {
+  background-color: var(--colors-components-button-tertiary-background-default);
+  color: var(--colors-components-button-tertiary-foreground-default);
+
+  &:hover:not(:disabled) {
+    background-color: var(--colors-components-button-tertiary-background-hover);
+    color: var(--colors-components-button-tertiary-foreground-hover);
+  }
+
+  &:disabled {
+    background-color: var(
+      --colors-components-button-tertiary-background-default
+    );
+    box-shadow: unset;
+  }
+}
+
+.variant-tertiary-color {
+  background-color: var(
+    --colors-components-button-tertiary-color-background-default
+  );
+  color: var(--colors-components-button-tertiary-color-foreground-default);
+
+  &:hover:not(:disabled) {
+    background-color: var(
+      --colors-components-button-tertiary-color-background-hover
+    );
+    color: var(--colors-components-button-tertiary-color-foreground-hover);
+  }
+
+  &:disabled {
+    background-color: var(
+      --colors-components-button-tertiary-background-default
+    );
+    box-shadow: unset;
+  }
+}

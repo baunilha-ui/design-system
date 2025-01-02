@@ -1,8 +1,44 @@
 .size-1 {
-    font-size: var(--font-size-3);
-    line-height: var(--line-height-2);
+  font-size: var(--font-size-3);
+  line-height: var(--line-height-2);
 
-    height: var(--space-8);
-    padding: var(--space-2) var(--space-3);
-    gap: var(--space-1);
+  height: var(--space-8);
+  padding: 0 var(--space-3);
+  gap: var(--space-1_5);
+}
+
+.size-2 {
+  font-size: var(--font-size-3);
+  line-height: var(--line-height-2);
+
+  height: var(--space-10);
+  padding: 0 var(--space-3_5);
+  gap: var(--space-1_5);
+}
+
+.size-3 {
+  font-size: var(--font-size-4);
+  line-height: var(--line-height-3);
+
+  height: var(--space-11);
+  padding: 0 var(--space-4);
+  gap: var(--space-2);
+}
+
+.size-4 {
+  font-size: var(--font-size-4);
+  line-height: var(--line-height-3);
+
+  height: var(--space-12);
+  padding: 0 var(--space-5);
+  gap: var(--space-2);
+}
+
+.size-5 {
+  font-size: var(--font-size-5);
+  line-height: var(--line-height-4);
+
+  height: var(--space-15);
+  padding: 0 var(--space-5_5);
+  gap: var(--space-2_5);
 }

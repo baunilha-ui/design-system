@@ -1,5 +1,16 @@
 # @baunilha/react
 
+## 1.1.0
+
+### Minor Changes
+
+- Added button component
+
+### Patch Changes
+
+- Updated dependencies
+  - @baunilha/tokens@1.0.2
+
 ## 1.0.4
 
 ### Patch Changes
