@@ -1,10 +1,14 @@
 {
   "name": "@baunilha/react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "cli"
+  ],
   "scripts": {
     "_build": "tsup src/index.tsx --format esm,cjs --dts --external react",
     "_dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch",
@@ -24,17 +28,13 @@
     "@baunilha/ts-config": "*",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
-    "esbuild-css-modules-plugin": "^3.1.2",
-    "esbuild-plugin-css-module": "^0.1.0",
     "esbuild-sass-plugin": "^3.3.1",
-    "esbuild-scss-modules-plugin": "^1.1.1",
     "postcss": "^8.4.49",
     "react": "^19.0.0",
     "sass": "^1.83.0",
-    "tsup": "^8.3.5",
     "typescript": "^5.7.2"
   },
-  "peerDependencies": {
-    "sass": ">=1.7.0"
+  "dependencies": {
+    "tsup": "^8.3.5"
   }
 }
