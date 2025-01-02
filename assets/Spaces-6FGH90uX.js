@@ -1,0 +1,4 @@
+import{j as t}from"./jsx-runtime-BjgbQsUx.js";import{useMDXComponents as r}from"./index-DLZJTL_W.js";import{ae as m}from"./index-CiuZDGn0.js";import{T as p}from"./TokensGrid-B3k47mNl.js";import{t as s}from"./tokens-DzwZ6v1d.js";import"./index-D2MAbzvX.js";import"./index-DEBVq0NN.js";import"./iframe-BmbZSdsd.js";import"../sb-preview/runtime.js";import"./index-uyBL3Yze.js";import"./index-CTOC-uzv.js";import"./index-CHGET4sZ.js";import"./index-DrFu-skq.js";function n(e){const o={h1:"h1",p:"p",...r(),...e.components};return t.jsxs(t.Fragment,{children:[t.jsx(m,{title:"Tokens/Space"}),`
+`,t.jsx(o.h1,{id:"space",children:"Space"}),`
+`,t.jsx(o.p,{children:"1rem = 10px"}),`
+`,t.jsx(p,{tokens:s.space,prefix:"--space"})]})}function D(e={}){const{wrapper:o}={...r(),...e.components};return o?t.jsx(o,{...e,children:t.jsx(n,{...e})}):n(e)}export{D as default};
