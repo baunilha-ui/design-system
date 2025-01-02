@@ -1,13 +1,14 @@
 {
   "name": "@baunilha/react",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
     "dist",
-    "cli"
+    "cli",
+    "tsup.config.ts"
   ],
   "scripts": {
     "_build": "tsup src/index.tsx --format esm,cjs --dts --external react",

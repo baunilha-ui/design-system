@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- Added tsup config on npm files
+
+## 1.0.4
+
+### Patch Changes
+
 - Fixed dependencies
 
 ## 1.0.3
