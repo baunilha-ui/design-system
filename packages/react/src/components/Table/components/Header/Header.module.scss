@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+
+    height: var(--space-11);
+    padding: 0 var(--space-6);
+    gap: var(--space-3);
+
+    background-color: var(--colors-background-secondary);
+    border-bottom: 1px solid var(--colors-border-secondary);
+
+    color: var(--colors-text-quaternary);
+    font-size: var(--font-size-2);
+    line-height: var(--line-height-1);
+    font-weight: 600;
+}

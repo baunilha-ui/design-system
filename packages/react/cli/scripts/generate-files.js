@@ -11,10 +11,13 @@ const generate = async () => {
   const config = await loadConfig()
 
   const unityType = config.unityType
+  const fontFamily = config.fontFamily
   const customTheme = config.theme
 
   const theme = createTheme({
-    options: { unityType },
+    options: {
+      unityType,
+    },
     customTheme,
   })
 
@@ -23,6 +26,7 @@ const generate = async () => {
   generateCSSFile({
     theme,
     outputFile: cssOutputDir,
+    fontFamily,
     unityType,
   })
 

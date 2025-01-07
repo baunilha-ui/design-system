@@ -1,5 +1,10 @@
 import { BaseTheme } from '../../base'
 import {
+  AvatarSchema,
+  createDarkAvatarSchema,
+  createLightAvatarSchema,
+} from './create-avatar-schema'
+import {
   ButtonLinkSchema,
   createDarkButtonLinkSchema,
   createLightButtonLinkSchema,
@@ -10,6 +15,11 @@ import {
   createLightButtonSchema,
 } from './create-button-schema'
 import {
+  createDarkNavItemButtonSchema,
+  createLightNavItemButtonSchema,
+  NavItemButtonSchema,
+} from './create-nav-item-button-schema'
+import {
   createDarkToggleSchema,
   createLightToggleSchema,
   ToggleSchema,
@@ -19,6 +29,8 @@ export interface ComponentSchema {
   button: ButtonSchema
   buttonLink: ButtonLinkSchema
   toggle: ToggleSchema
+  navItemButton: NavItemButtonSchema
+  avatar: AvatarSchema
 }
 
 export const createLightComponentsSchema = (
@@ -27,6 +39,8 @@ export const createLightComponentsSchema = (
   button: createLightButtonSchema(theme),
   buttonLink: createLightButtonLinkSchema(theme),
   toggle: createLightToggleSchema(theme),
+  navItemButton: createLightNavItemButtonSchema(theme),
+  avatar: createLightAvatarSchema(theme),
 })
 
 export const createDarkComponentsSchema = (
@@ -35,4 +49,6 @@ export const createDarkComponentsSchema = (
   button: createDarkButtonSchema(theme),
   buttonLink: createDarkButtonLinkSchema(theme),
   toggle: createDarkToggleSchema(theme),
+  navItemButton: createDarkNavItemButtonSchema(theme),
+  avatar: createDarkAvatarSchema(theme),
 })

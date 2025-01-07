@@ -1,0 +1,59 @@
+.size-1 {
+  width: var(--space-6);
+  height: var(--space-6);
+
+  > figure {
+    width: var(--space-4);
+    height: var(--space-4);
+  }
+}
+
+.size-2 {
+  width: var(--space-8);
+  height: var(--space-8);
+
+  > figure {
+    width: var(--space-5);
+    height: var(--space-5);
+  }
+}
+
+.size-3 {
+  width: var(--space-10);
+  height: var(--space-10);
+
+  > figure {
+    width: var(--space-6);
+    height: var(--space-6);
+  }
+}
+
+.size-4 {
+  width: var(--space-12);
+  height: var(--space-12);
+
+  > figure {
+    width: var(--space-7);
+    height: var(--space-7);
+  }
+}
+
+.size-5 {
+  width: var(--space-14);
+  height: var(--space-14);
+
+  > figure {
+    width: var(--space-8);
+    height: var(--space-8);
+  }
+}
+
+.size-6 {
+  width: var(--space-16);
+  height: var(--space-16);
+
+  > figure {
+    width: var(--space-8);
+    height: var(--space-8);
+  }
+}

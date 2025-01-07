@@ -56,19 +56,19 @@ export const createTheme = ({
       radii: mergedTheme.radii,
       fontSize: mergedTheme.fontSize,
       lineHeight: mergedTheme.lineHeight,
+      maxWidth: mergedTheme.maxWidth,
     },
     lineHeight: unityTypeMapperFn(mergedTheme.lineHeight),
     radii: unityTypeMapperFn(mergedTheme.radii),
     fontSize: unityTypeMapperFn(mergedTheme.fontSize),
     space: unityTypeMapperFn(mergedTheme.space),
+    maxWidth: unityTypeMapperFn(mergedTheme.maxWidth),
     colors: {
       ...mergedTheme.colors,
       light: lightColors,
       dark: darkColors,
     },
   }
-
-  theme.set(newTheme)
 
   return newTheme
 }

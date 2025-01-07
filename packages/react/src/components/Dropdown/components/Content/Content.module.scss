@@ -1,0 +1,31 @@
+.wrapper {
+  --margin-default: var(--space-4);
+  position: absolute;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: var(--space-2);
+  border: 1px solid var(--colors-border-secondary);
+  background-color: var(--colors-background-primary);
+
+  box-shadow:
+    0px 12px 16px -4px
+      var(--Colors-Effects-Shadows-shadow-lg_01, rgba(10, 13, 18, 0.08)),
+    0px 4px 6px -2px
+      var(--Colors-Effects-Shadows-shadow-lg_02, rgba(10, 13, 18, 0.03)),
+    0px 2px 2px -1px
+      var(--Colors-Effects-Shadows-shadow-lg_03, rgba(10, 13, 18, 0.04));
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  align-self: stretch;
+
+  padding: var(--space-1) 0px;
+}

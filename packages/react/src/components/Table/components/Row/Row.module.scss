@@ -1,0 +1,21 @@
+.row {
+  display: contents;
+
+  &:not(:last-child) > div {
+    border-bottom: 1px solid var(--colors-border-secondary);
+  }
+}
+
+.row__clickable {
+  & > div {
+    cursor: pointer;
+    transition: background-color 0.18s;
+    will-change: background-color;
+    
+    background-color: transparent;
+  }
+
+  &:hover > div {
+    background-color: var(--colors-background-secondary);
+  }
+}

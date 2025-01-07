@@ -1,0 +1,15 @@
+.cell {  
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+
+  height: var(--space-18);
+  padding: 0 var(--space-6);
+  gap: var(--space-3);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}

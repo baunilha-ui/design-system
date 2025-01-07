@@ -1,0 +1,54 @@
+.button {
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: var(--space-10);
+    height: var(--space-10);
+    border-radius: var(--radii-1_5);
+
+    color: var(--colors-components-nav-item-button-icon-foreground-default);
+
+    border: none;
+    background-color: transparent;
+
+    transition: background-color 0.18s;
+    will-change: background-color;
+
+    &:hover:not(:disabled) {
+        background-color: var(--colors-background-primary-hover);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+    }
+
+    &::after {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+        opacity: 1;
+        z-index: 1;
+    
+        border-radius: calc(var(--radii-2));
+        border-style: solid;
+        border-width: 1.5px;
+        border-color: transparent;
+    
+        transition:
+          opacity 0.18s,
+          inset 0.18s, border-color .18s, border-radius .18s;
+        will-change: opacity, inset, border-color, border-radius;
+      }
+    
+      &:focus-visible::after {
+        inset: -3px !important;
+        opacity: 1;
+        border-radius: calc(var(--radii-2) + 3px);
+        border-color: var(--colors-primary-brand-500);
+      }
+}

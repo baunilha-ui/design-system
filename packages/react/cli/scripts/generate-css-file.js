@@ -14,11 +14,17 @@ const mountVariables = (variables) => {
   return cssVariables + `\n`
 }
 
-const generateCSSFile = async ({ theme, outputFile, unityType }) => {
+const generateCSSFile = async ({
+  theme,
+  outputFile,
+  unityType,
+  fontFamily,
+}) => {
   // ----------- Init File
   //
   let cssContent = `  /* DON'T CHANGE THIS FILE, IT CAN BE OVERWRITTEN */\n\n`
-  cssContent += '@import "@baunilha/react/dist/index.css"; \n\n'
+  cssContent += '@use "@baunilha/react/styles/components"; \n'
+  cssContent += '@use "@baunilha/react/styles/components/client"; \n\n'
   cssContent += ':root {\n'
   cssContent += `  /* -------- Generated Variables -------- */\n\n`
 
@@ -32,7 +38,15 @@ const generateCSSFile = async ({ theme, outputFile, unityType }) => {
     cssContent += `  font-size: 10px;\n\n`
   }
 
+  if (fontFamily) {
+    cssContent += `  font-family: ${fontFamily};\n\n`
+  }
+
   cssContent += `  /* -------- Spaces Variables -------- */\n\n`
+  const maxWidthVariables = createCSSVariables(theme.maxWidth, '--max-width')
+  cssContent += mountVariables(maxWidthVariables)
+  cssContent += '\n'
+
   const spacesVariables = createCSSVariables(theme.space, '--space')
 
   cssContent += mountVariables(spacesVariables)
@@ -104,11 +118,47 @@ const generateCSSFile = async ({ theme, outputFile, unityType }) => {
 
   const existsOutputDir = fs.existsSync(outputPath)
 
+  const outputDir = path.dirname(outputPath)
+
   if (!existsOutputDir) {
-    fs.mkdirSync(path.dirname(outputPath), { recursive: true })
+    fs.mkdirSync(outputDir, { recursive: true })
   }
 
   fs.writeFileSync(outputPath, cssContent, 'utf-8')
+
+  let breakpointsContent = `/* DON'T CHANGE THIS FILE, IT CAN BE OVERWRITTEN */\n`
+
+  breakpointsContent += `$mobile: 768px;\n`
+  breakpointsContent += `$tablet: 1024px;\n`
+  breakpointsContent += `$desktop: 1140px;\n`
+  breakpointsContent += `$widescreen: 1920px;\n\n`
+
+  breakpointsContent += `@mixin mobile {\n`
+  breakpointsContent += `  @media (max-width: $mobile) {\n`
+  breakpointsContent += `    @content;\n`
+  breakpointsContent += `  }\n`
+  breakpointsContent += `}\n\n`
+
+  breakpointsContent += `@mixin tablet {\n`
+  breakpointsContent += `  @media (max-width: $tablet) {\n`
+  breakpointsContent += `    @content;\n`
+  breakpointsContent += `  }\n`
+  breakpointsContent += `}\n\n`
+
+  breakpointsContent += `@mixin desktop {\n`
+  breakpointsContent += `  @media (min-width: $desktop) and (max-width: calc($widescreen - 1px)) {\n`
+  breakpointsContent += `    @content;\n`
+  breakpointsContent += `  }\n`
+  breakpointsContent += `}\n\n`
+
+  breakpointsContent += `@mixin widescreen {\n`
+  breakpointsContent += `  @media (min-width: $widescreen) {\n`
+  breakpointsContent += `    @content;\n`
+  breakpointsContent += `  }\n`
+  breakpointsContent += `}\n\n`
+
+  const outputBreakpointsFile = path.join(outputDir, 'breakpoints.scss')
+  fs.writeFileSync(outputBreakpointsFile, breakpointsContent, 'utf-8')
 
   console.log(`CSS Generated in: ${outputPath}`)
 }

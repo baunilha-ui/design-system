@@ -1,6 +1,6 @@
 {
   "name": "@baunilha/react",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -10,6 +10,18 @@
     "cli",
     "tsup.config.ts"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./client": {
+      "import": "./dist/client.mjs",
+      "require": "./dist/client.js"
+    },
+    "./styles/components": "./dist/index.css",
+    "./styles/components/client": "./dist/client.css"
+  },
   "scripts": {
     "_build": "tsup src/index.tsx --format esm,cjs --dts --external react",
     "_dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch",
@@ -28,14 +40,20 @@
     "@baunilha/ts-config": "*",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
+    "esbuild-plugin-tsconfig-paths": "^1.0.1",
     "esbuild-sass-plugin": "^3.3.1",
     "postcss": "^8.4.49",
     "react": "^19.0.0",
     "sass": "^1.83.0",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.7.2"
   },
   "dependencies": {
-    "tsup": "^8.3.5",
-    "@baunilha/tokens": "*"
+    "@baunilha/tokens": "*",
+    "tsup": "^8.3.5"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }

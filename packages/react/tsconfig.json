@@ -1,4 +1,10 @@
 {
   "extends": "@baunilha/ts-config/react.json",
   "include": ["src"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/styles/*": ["./styles/*"],
+    }
+  }
 }

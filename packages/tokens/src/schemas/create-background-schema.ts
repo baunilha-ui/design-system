@@ -2,6 +2,8 @@ import { BaseTheme } from '../base'
 
 export type BackgroundSchema = {
   primary: string
+  primaryHover: string
+  primaryActive: string
   primary_alt: string
   primarySolid: string
   secondary: string
@@ -35,6 +37,8 @@ export const createLightBackgroundSchema = (
   theme: BaseTheme,
 ): BackgroundSchema => ({
   primary: theme.colors.primary.base.white,
+  primaryHover: theme.colors.primary.lightGray[50],
+  primaryActive: theme.colors.primary.lightGray[100],
   primary_alt: theme.colors.primary.base.white,
   primarySolid: theme.colors.primary.lightGray[950],
   secondary: theme.colors.primary.lightGray[50],
@@ -46,7 +50,7 @@ export const createLightBackgroundSchema = (
   active: theme.colors.primary.lightGray[50],
   disabled: theme.colors.primary.lightGray[100],
   disabled_subtle: theme.colors.primary.lightGray[100],
-  overlay: theme.colors.primary.base.black,
+  overlay: theme.colors.primary.lightGray[950],
   brandPrimary: theme.colors.primary.brand[50],
   brandPrimary_alt: theme.colors.primary.brand[50],
   brandSecondary: theme.colors.primary.brand[100],
@@ -68,6 +72,8 @@ export const createDarkBackgroundSchema = (
   theme: BaseTheme,
 ): BackgroundSchema => ({
   primary: theme.colors.primary.base.black,
+  primaryHover: theme.colors.primary.darkGray[800],
+  primaryActive: theme.colors.primary.darkGray[800],
   primary_alt: theme.colors.primary.darkGray[900],
   primarySolid: theme.colors.primary.darkGray[900],
   secondary: theme.colors.primary.darkGray[900],

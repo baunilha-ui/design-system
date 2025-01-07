@@ -1,5 +1,13 @@
 # @baunilha/react
 
+## 1.1.2
+
+### Patch Changes
+
+- Added table and dropdown component
+- Updated dependencies
+  - @baunilha/tokens@1.0.4
+
 ## 1.1.0
 
 ### Minor Changes

@@ -11,6 +11,7 @@ import { BaunilhaConfig } from '@baunilha/react';
 // Run \`npx baunilha generate\` to regenerate if you change this file
 const config: BaunilhaConfig = {
   output: 'src/tokens/',
+  // fontFamily: 'Arial, sans-serif',
   // unityType: 'rem',  // 'px' | 'rem'
   // defaultFontSize: 10,
   // theme: {},

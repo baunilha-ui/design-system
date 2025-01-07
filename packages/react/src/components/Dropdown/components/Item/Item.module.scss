@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 1px var(--space-1_5);
+
+  align-self: stretch;
+}
+
+.item {
+  flex: 1 0 0;
+  display: flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-2_5);
+  border-radius: var(--space-1_5);
+
+  color: var(--colors-text-secondary);
+  font-size: var(--font-size-3);
+  line-height: var(--line-height-2);
+  font-weight: 600;
+}
+
+.item__clickable {
+  cursor: pointer;
+
+  transition: background-color 0.18s;
+  will-change: background-color;
+
+  &:hover {
+    background-color: var(--colors-background-primary-hover);
+  }
+}

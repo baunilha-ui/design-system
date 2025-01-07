@@ -45,15 +45,15 @@ export default {
       options: [1, 2, 3, 4, 5],
       description: 'Tamanho do botão.',
     },
+    onClick: {
+      action: 'onPress',
+      description: 'Função chamada ao clicar no botão.',
+    },
     children: {
       control: {
         type: 'text',
       },
       description: 'Texto ou elementos filhos do botão.',
-    },
-    onPress: {
-      action: 'onPress',
-      description: 'Função chamada ao clicar no botão.',
     },
   },
 } as Meta<ButtonProps>

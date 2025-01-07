@@ -68,6 +68,10 @@ export const theme: Theme = {
     "10": "7.2rem",
     "11": "9rem"
   },
+  "maxWidth": {
+    "desktop": "128rem",
+    "sidebar": "28rem"
+  },
   "colors": {
     "primary": {
       "base": {
@@ -91,31 +95,31 @@ export const theme: Theme = {
       },
       "lightGray": {
         "25": "#FCFCFD",
-        "50": "#f9fafb",
-        "100": "#f2f4f7",
-        "200": "#E4E7EC",
-        "300": "#D0D5DD",
-        "400": "#98a2b3",
-        "500": "#667085",
-        "600": "#475467",
-        "700": "#344054",
-        "800": "#182230",
-        "900": "#101828",
-        "950": "#0C111D"
+        "50": "#FAFAFA",
+        "100": "#F5F5F5",
+        "200": "#E9EAEB",
+        "300": "#D5D7DA",
+        "400": "#A4A7AE",
+        "500": "#717680",
+        "600": "#535862",
+        "700": "#414651",
+        "800": "#252B37",
+        "900": "#181D27",
+        "950": "#0A0D12"
       },
       "darkGray": {
         "25": "#FAFAFA",
-        "50": "#F5F5F6",
-        "100": "#F0F1F1",
+        "50": "#F7F7F7",
+        "100": "#F0F0F1",
         "200": "#ECECED",
         "300": "#CECFD2",
-        "400": "#94969C",
+        "400": "#94979C",
         "500": "#85888E",
-        "600": "#61646C",
-        "700": "#333741",
-        "800": "#1F242F",
-        "900": "#161B26",
-        "950": "#0C111D"
+        "600": "#61656C",
+        "700": "#373A41",
+        "800": "#22262F",
+        "900": "#13161B",
+        "950": "#0C0E12"
       },
       "error": {
         "25": "#FFFBFA",
@@ -277,16 +281,16 @@ export const theme: Theme = {
     "light": {
       "utility": {
         "gray": {
-          "50": "#f9fafb",
-          "100": "#f2f4f7",
-          "200": "#E4E7EC",
-          "300": "#D0D5DD",
-          "400": "#98a2b3",
-          "500": "#667085",
-          "600": "#475467",
-          "700": "#344054",
-          "800": "#182230",
-          "900": "#101828"
+          "50": "#FAFAFA",
+          "100": "#F5F5F5",
+          "200": "#E9EAEB",
+          "300": "#D5D7DA",
+          "400": "#A4A7AE",
+          "500": "#717680",
+          "600": "#535862",
+          "700": "#414651",
+          "800": "#252B37",
+          "900": "#181D27"
         },
         "brand": {
           "50": "#fef7df",
@@ -402,14 +406,14 @@ export const theme: Theme = {
         }
       },
       "text": {
-        "primary": "#0C111D",
-        "secondary": "#344054",
-        "tertiary": "#475467",
-        "quaternary": "#667085",
+        "primary": "#181D27",
+        "secondary": "#414651",
+        "tertiary": "#535862",
+        "quaternary": "#717680",
         "white": "#FFFFFF",
-        "disabled": "#667085",
-        "placeholder": "#667085",
-        "placeholder_subtle": "#D0D5DD",
+        "disabled": "#717680",
+        "placeholder": "#717680",
+        "placeholder_subtle": "#D5D7DA",
         "brandPrimary": "#635018",
         "brandSecondary": "#b89432",
         "brandTertiary": "#cba337",
@@ -436,16 +440,16 @@ export const theme: Theme = {
           },
           "secondary": {
             "foreground": {
-              "default": "#344054",
-              "hover": "#182230"
+              "default": "#414651",
+              "hover": "#252B37"
             },
             "background": {
               "default": "#FFFFFF",
-              "hover": "#f9fafb"
+              "hover": "#FAFAFA"
             },
             "border": {
-              "default": "#D0D5DD",
-              "hover": "#D0D5DD"
+              "default": "#D5D7DA",
+              "hover": "#D5D7DA"
             }
           },
           "secondary-color": {
@@ -464,12 +468,12 @@ export const theme: Theme = {
           },
           "tertiary": {
             "foreground": {
-              "default": "#475467",
-              "hover": "#344054"
+              "default": "#535862",
+              "hover": "#414651"
             },
             "background": {
               "default": "transparent",
-              "hover": "#f9fafb"
+              "hover": "#FAFAFA"
             }
           },
           "tertiary-color": {
@@ -530,8 +534,8 @@ export const theme: Theme = {
           },
           "gray": {
             "foreground": {
-              "default": "#475467",
-              "hover": "#344054"
+              "default": "#535862",
+              "hover": "#414651"
             }
           },
           "error": {
@@ -545,26 +549,42 @@ export const theme: Theme = {
           "track": {
             "background": {
               "active": "#cba337",
-              "inactive": "#f2f4f7",
+              "inactive": "#F5F5F5",
               "hover": "#b89432"
             }
           }
+        },
+        "navItemButton": {
+          "icon": {
+            "foreground": {
+              "default": "#717680",
+              "active": "#414651"
+            }
+          }
+        },
+        "avatar": {
+          "background": {
+            "default": "#F5F5F5"
+          },
+          "contrastBorder": "rgba(0, 0, 0, 0.08)"
         }
       },
       "background": {
         "primary": "#FFFFFF",
+        "primaryHover": "#FAFAFA",
+        "primaryActive": "#F5F5F5",
         "primary_alt": "#FFFFFF",
-        "primarySolid": "#0C111D",
-        "secondary": "#f9fafb",
-        "secondary_alt": "#f9fafb",
+        "primarySolid": "#0A0D12",
+        "secondary": "#FAFAFA",
+        "secondary_alt": "#FAFAFA",
         "secondary_subtle": "#FCFCFD",
-        "secondarySolid": "#f9fafb",
-        "tertiary": "#f2f4f7",
-        "quaternary": "#E4E7EC",
-        "active": "#f9fafb",
-        "disabled": "#f2f4f7",
-        "disabled_subtle": "#f2f4f7",
-        "overlay": "#000000",
+        "secondarySolid": "#FAFAFA",
+        "tertiary": "#F5F5F5",
+        "quaternary": "#E9EAEB",
+        "active": "#FAFAFA",
+        "disabled": "#F5F5F5",
+        "disabled_subtle": "#F5F5F5",
+        "overlay": "#0A0D12",
         "brandPrimary": "#fef7df",
         "brandPrimary_alt": "#fef7df",
         "brandSecondary": "#fdf2cd",
@@ -582,26 +602,26 @@ export const theme: Theme = {
         "successSolid": "#079455"
       },
       "border": {
-        "primary": "#D0D5DD",
-        "secondary": "#E4E7EC",
-        "tertiary": "#f2f4f7",
-        "disabled": "#D0D5DD",
-        "disabled_subtle": "#E4E7EC",
+        "primary": "#D5D7DA",
+        "secondary": "#E9EAEB",
+        "tertiary": "#F5F5F5",
+        "disabled": "#D5D7DA",
+        "disabled_subtle": "#E9EAEB",
         "brand": "#dfb541",
         "brandAlt": "#cba337",
         "error": "#F04438",
         "error_subtle": "#FDA29B"
       },
       "foreground": {
-        "primary": "#101828",
-        "secondary": "#344054",
-        "tertiary": "#475467",
-        "quaternary": "#667085",
-        "quinary": "#98a2b3",
-        "senary": "#D0D5DD",
+        "primary": "#181D27",
+        "secondary": "#414651",
+        "tertiary": "#535862",
+        "quaternary": "#717680",
+        "quinary": "#A4A7AE",
+        "senary": "#D5D7DA",
         "white": "#FFFFFF",
-        "disabled": "#98a2b3",
-        "disabled_subtle": "#D0D5DD",
+        "disabled": "#A4A7AE",
+        "disabled_subtle": "#D5D7DA",
         "brandPrimary": "#cba337",
         "brandPrimary_alt": "#cba337",
         "brandSecondary": "#dfb541",
@@ -616,16 +636,16 @@ export const theme: Theme = {
     "dark": {
       "utility": {
         "gray": {
-          "50": "#161B26",
-          "100": "#1F242F",
-          "200": "#333741",
-          "300": "#333741",
-          "400": "#61646C",
+          "50": "#13161B",
+          "100": "#22262F",
+          "200": "#373A41",
+          "300": "#373A41",
+          "400": "#61656C",
           "500": "#85888E",
-          "600": "#94969C",
+          "600": "#94979C",
           "700": "#CECFD2",
           "800": "#ECECED",
-          "900": "#F0F1F1"
+          "900": "#F0F0F1"
         },
         "brand": {
           "50": "#3b2f0a",
@@ -741,18 +761,18 @@ export const theme: Theme = {
         }
       },
       "text": {
-        "primary": "#F5F5F6",
+        "primary": "#F7F7F7",
         "secondary": "#CECFD2",
-        "tertiary": "#94969C",
-        "quaternary": "#94969C",
+        "tertiary": "#94979C",
+        "quaternary": "#94979C",
         "white": "#FFFFFF",
         "disabled": "#85888E",
-        "placeholder": "#94969C",
-        "placeholder_subtle": "#333741",
-        "brandPrimary": "#F5F5F6",
+        "placeholder": "#94979C",
+        "placeholder_subtle": "#373A41",
+        "brandPrimary": "#F7F7F7",
         "brandSecondary": "#CECFD2",
-        "brandTertiary": "#94969C",
-        "brandTertiary_alt": "#F5F5F6",
+        "brandTertiary": "#94979C",
+        "brandTertiary_alt": "#F7F7F7",
         "errorPrimary": "#F97066",
         "successPrimary": "#F97066",
         "warningPrimary": "#F97066"
@@ -776,15 +796,15 @@ export const theme: Theme = {
           "secondary": {
             "foreground": {
               "default": "#CECFD2",
-              "hover": "#F0F1F1"
+              "hover": "#F0F0F1"
             },
             "background": {
-              "default": "#161B26",
-              "hover": "#1F242F"
+              "default": "#13161B",
+              "hover": "#22262F"
             },
             "border": {
-              "default": "#333741",
-              "hover": "#333741"
+              "default": "#373A41",
+              "hover": "#373A41"
             }
           },
           "primary-error": {
@@ -804,35 +824,35 @@ export const theme: Theme = {
           "secondary-color": {
             "foreground": {
               "default": "#CECFD2",
-              "hover": "#F0F1F1"
+              "hover": "#F0F0F1"
             },
             "background": {
-              "default": "#161B26",
-              "hover": "#1F242F"
+              "default": "#13161B",
+              "hover": "#22262F"
             },
             "border": {
-              "default": "#333741",
-              "hover": "#333741"
+              "default": "#373A41",
+              "hover": "#373A41"
             }
           },
           "tertiary": {
             "foreground": {
-              "default": "#94969C",
+              "default": "#94979C",
               "hover": "#ECECED"
             },
             "background": {
               "default": "transparent",
-              "hover": "#1F242F"
+              "hover": "#22262F"
             }
           },
           "tertiary-color": {
             "foreground": {
               "default": "#CECFD2",
-              "hover": "#F0F1F1"
+              "hover": "#F0F0F1"
             },
             "background": {
               "default": "transparent",
-              "hover": "#1F242F"
+              "hover": "#22262F"
             }
           },
           "secondary-error": {
@@ -864,12 +884,12 @@ export const theme: Theme = {
           "color": {
             "foreground": {
               "default": "#CECFD2",
-              "hover": "#F0F1F1"
+              "hover": "#F0F0F1"
             }
           },
           "gray": {
             "foreground": {
-              "default": "#94969C",
+              "default": "#94979C",
               "hover": "#ECECED"
             }
           },
@@ -884,31 +904,47 @@ export const theme: Theme = {
           "track": {
             "background": {
               "active": "#cba337",
-              "inactive": "#1F242F",
+              "inactive": "#22262F",
               "hover": "#b89432"
             }
           }
+        },
+        "navItemButton": {
+          "icon": {
+            "foreground": {
+              "default": "#94979C",
+              "active": "#CECFD2"
+            }
+          }
+        },
+        "avatar": {
+          "background": {
+            "default": "#22262F"
+          },
+          "contrastBorder": "rgba(255, 255, 255, 0.12)"
         }
       },
       "background": {
         "primary": "#000000",
-        "primary_alt": "#161B26",
-        "primarySolid": "#161B26",
-        "secondary": "#161B26",
+        "primaryHover": "#22262F",
+        "primaryActive": "#22262F",
+        "primary_alt": "#13161B",
+        "primarySolid": "#13161B",
+        "secondary": "#13161B",
         "secondary_alt": "#000000",
-        "secondary_subtle": "#161B26",
-        "secondarySolid": "#61646C",
-        "tertiary": "#1F242F",
-        "quaternary": "#333741",
-        "active": "#1F242F",
-        "disabled": "#1F242F",
-        "disabled_subtle": "#161B26",
-        "overlay": "#1F242F",
+        "secondary_subtle": "#13161B",
+        "secondarySolid": "#61656C",
+        "tertiary": "#22262F",
+        "quaternary": "#373A41",
+        "active": "#22262F",
+        "disabled": "#22262F",
+        "disabled_subtle": "#13161B",
+        "overlay": "#22262F",
         "brandPrimary": "#dfb541",
-        "brandPrimary_alt": "#1F242F",
+        "brandPrimary_alt": "#22262F",
         "brandSecondary": "#cba337",
         "brandSolid": "#cba337",
-        "brandSection": "#1F242F",
+        "brandSection": "#22262F",
         "brandSection_subtle": "#000000",
         "errorPrimary": "#F04438",
         "errorSecondary": "#D92D20",
@@ -921,26 +957,26 @@ export const theme: Theme = {
         "successSolid": "#079455"
       },
       "border": {
-        "primary": "#333741",
-        "secondary": "#1F242F",
-        "tertiary": "#1F242F",
-        "disabled": "#333741",
-        "disabled_subtle": "#1F242F",
+        "primary": "#373A41",
+        "secondary": "#22262F",
+        "tertiary": "#22262F",
+        "disabled": "#373A41",
+        "disabled_subtle": "#22262F",
         "brand": "#f0ce61",
-        "brandAlt": "#333741",
+        "brandAlt": "#373A41",
         "error": "#F97066",
         "error_subtle": "#F97066"
       },
       "foreground": {
         "primary": "#FFFFFF",
         "secondary": "#CECFD2",
-        "tertiary": "#94969C",
-        "quaternary": "#94969C",
+        "tertiary": "#94979C",
+        "quaternary": "#94979C",
         "quinary": "#85888E",
-        "senary": "#61646C",
+        "senary": "#61656C",
         "white": "#FFFFFF",
         "disabled": "#85888E",
-        "disabled_subtle": "#61646C",
+        "disabled_subtle": "#61656C",
         "brandPrimary": "#dfb541",
         "brandPrimary_alt": "#CECFD2",
         "brandSecondary": "#dfb541",
@@ -1020,6 +1056,10 @@ export const theme: Theme = {
       "9": 60,
       "10": 72,
       "11": 90
+    },
+    "maxWidth": {
+      "desktop": 1280,
+      "sidebar": 280
     }
   }
 };

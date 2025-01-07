@@ -12,6 +12,7 @@ type Output =
 export type BaunilhaConfig = {
   output: Output
   unityType?: 'px' | 'rem'
+  fontFamily?: string
   defaultFontSize?: number
   include?: Tokens[]
   theme?: CustomTheme

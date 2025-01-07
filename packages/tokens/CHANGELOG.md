@@ -1,5 +1,11 @@
 # @baunilha/tokens
 
+## 1.0.4
+
+### Patch Changes
+
+- Add some tokens
+
 ## 1.0.2
 
 ### Patch Changes

@@ -1,0 +1,16 @@
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-0_5);
+  padding: 0 var(--space-3);
+
+  align-items: stretch;
+}
+
+@include mobile {
+  .menu {
+    padding: 0 var(--space-2);
+  }
+}

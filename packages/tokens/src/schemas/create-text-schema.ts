@@ -19,7 +19,7 @@ export type TextSchema = {
 }
 
 export const createLightTextSchema = (theme: BaseTheme): TextSchema => ({
-  primary: theme.colors.primary.lightGray[950],
+  primary: theme.colors.primary.lightGray[900],
   secondary: theme.colors.primary.lightGray[700],
   tertiary: theme.colors.primary.lightGray[600],
   quaternary: theme.colors.primary.lightGray[500],

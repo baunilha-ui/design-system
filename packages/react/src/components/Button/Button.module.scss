@@ -18,10 +18,11 @@
 
   &::after {
     content: "";
+    pointer-events: none;
     position: absolute;
     inset: 0;
     opacity: 1;
-    z-index: -1;
+    z-index: 1;
 
     border-radius: calc(var(--radii-2));
     border-style: solid;
@@ -34,7 +35,7 @@
     will-change: opacity, inset, border-color, border-radius;
   }
 
-  &:focus::after {
+  &:focus-visible::after {
     inset: -3px !important;
     opacity: 1;
     border-radius: calc(var(--radii-2) + 3px);

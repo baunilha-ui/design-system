@@ -1,0 +1,31 @@
+.header {
+  width: 100%;
+  height: var(--space-18);
+  background-color: var(--colors-background-primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-bottom: 1px solid var(--colors-border-secondary);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width-desktop);
+  padding: 0 var(--space-8);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@include mobile {
+  .header {
+    height: fit-content;
+  }
+
+  .container {
+    padding: var(--space-3);
+  }
+}

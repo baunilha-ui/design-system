@@ -1,0 +1,41 @@
+.container {
+  position: relative;
+
+  background-color: var(--colors-background-primary);
+  border-right: 1px solid var(--colors-border-secondary);
+  width: var(--max-width-sidebar);
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  padding-top: var(--space-6);
+
+  z-index: 1001;
+
+  transition: transform 0.18s;
+}
+
+.container__closed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  transform: translateX(-100%);
+}
+
+.container__opened {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  transform: translateX(0);
+}
+
+@include mobile {
+  .container {
+    padding-top: var(--space-4);
+  }
+}
