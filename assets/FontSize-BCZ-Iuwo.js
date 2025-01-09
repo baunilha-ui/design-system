@@ -1,0 +1,4 @@
+import{j as t}from"./jsx-runtime-D_zvdyIk.js";import{useMDXComponents as r}from"./index-E3NoqGJO.js";import{ae as i}from"./index-DUhMNNF6.js";import{T as m}from"./TokensGrid-CDes7x8B.js";import{t as s}from"./tokens-COGo4dX_.js";import"./index-CqrSl2Gl.js";import"./iframe-BpEyqq4h.js";import"../sb-preview/runtime.js";import"./index-FqUYIDda.js";import"./index-729qusIZ.js";import"./index-CHGET4sZ.js";import"./index-DrFu-skq.js";function e(o){const n={h1:"h1",p:"p",...r(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(i,{title:"Tokens/Font Size"}),`
+`,t.jsx(n.h1,{id:"font-size",children:"Font Size"}),`
+`,t.jsx(n.p,{children:"1rem = 10px"}),`
+`,t.jsx(m,{tokens:s.fontSize,prefix:"--font-size"})]})}function k(o={}){const{wrapper:n}={...r(),...o.components};return n?t.jsx(n,{...o,children:t.jsx(e,{...o})}):e(o)}export{k as default};

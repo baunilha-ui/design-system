@@ -1,0 +1,3 @@
+import{j as t}from"./jsx-runtime-D_zvdyIk.js";import{useMDXComponents as i}from"./index-E3NoqGJO.js";import{ae as r}from"./index-DUhMNNF6.js";import"./index-CqrSl2Gl.js";import"./iframe-BpEyqq4h.js";import"../sb-preview/runtime.js";import"./index-FqUYIDda.js";import"./index-729qusIZ.js";import"./index-CHGET4sZ.js";import"./index-DrFu-skq.js";function e(n){const o={h1:"h1",p:"p",...i(),...n.components};return t.jsxs(t.Fragment,{children:[t.jsx(r,{title:"Baunilha UI"}),`
+`,t.jsx(o.h1,{id:"baunilha-ui",children:"Baunilha UI"}),`
+`,t.jsx(o.p,{children:"Design System made by Baunilha."})]})}function j(n={}){const{wrapper:o}={...i(),...n.components};return o?t.jsx(o,{...n,children:t.jsx(e,{...n})}):e(n)}export{j as default};

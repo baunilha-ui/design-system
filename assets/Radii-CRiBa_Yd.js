@@ -1,0 +1,4 @@
+import{j as t}from"./jsx-runtime-D_zvdyIk.js";import{useMDXComponents as n}from"./index-E3NoqGJO.js";import{ae as e}from"./index-DUhMNNF6.js";import{T as m}from"./TokensGrid-CDes7x8B.js";import{t as s}from"./tokens-COGo4dX_.js";import"./index-CqrSl2Gl.js";import"./iframe-BpEyqq4h.js";import"../sb-preview/runtime.js";import"./index-FqUYIDda.js";import"./index-729qusIZ.js";import"./index-CHGET4sZ.js";import"./index-DrFu-skq.js";function i(o){const r={h1:"h1",p:"p",...n(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(e,{title:"Tokens/Radii"}),`
+`,t.jsx(r.h1,{id:"radii",children:"Radii"}),`
+`,t.jsx(r.p,{children:"1rem = 10px"}),`
+`,t.jsx(m,{tokens:s.radii,prefix:"--radii"})]})}function C(o={}){const{wrapper:r}={...n(),...o.components};return r?t.jsx(r,{...o,children:t.jsx(i,{...o})}):i(o)}export{C as default};
