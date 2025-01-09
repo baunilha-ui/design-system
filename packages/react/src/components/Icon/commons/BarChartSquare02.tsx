@@ -1,4 +1,4 @@
-import { SVGCommonProps } from './types'
+import { SVGCommonProps } from './@types'
 
 const BarChartSquare02 = ({ strokeWidth }: SVGCommonProps) => {
   return (

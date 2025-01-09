@@ -1,4 +1,4 @@
-import { SVGCommonProps } from './types'
+import { SVGCommonProps } from './@types'
 
 const Menu02 = ({ strokeWidth }: SVGCommonProps) => {
   return (

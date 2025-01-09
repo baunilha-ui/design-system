@@ -1,1 +1,9 @@
-.input {}
+.input {
+    border: none;
+    outline: none;
+    padding: 0;
+
+    flex: 1;
+
+    color: var(--colors-text-primary);
+}

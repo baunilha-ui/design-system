@@ -1,4 +1,4 @@
-import { SVGCommonProps } from './types'
+import { SVGCommonProps } from './@types'
 
 const LogOut01 = ({ strokeWidth }: SVGCommonProps) => {
   return (

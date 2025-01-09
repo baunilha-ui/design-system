@@ -1,6 +1,6 @@
 {
   "name": "@baunilha/react",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "@baunilha/tokens": "*",
+    "react-hook-form": "^7.54.2",
     "tsup": "^8.3.5"
   },
   "peerDependencies": {

@@ -1,0 +1,13 @@
+.label {
+  color: var(--colors-text-secondary);
+  font-weight: 500;
+  font-size: var(--font-size-3);
+  line-height: var(--line-height-2);
+
+  display: flex;
+  gap: var(--space-0_5);
+}
+
+.required {
+    color: var(--colors-text-brand-tertiary);
+}

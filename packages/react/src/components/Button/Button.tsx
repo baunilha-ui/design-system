@@ -4,6 +4,7 @@ import sizes from './Size.module.scss'
 import variants from './Variant.module.scss'
 
 export type ButtonProps = {
+  ref?: React.Ref<HTMLButtonElement>
   children: React.ReactNode
   className?: string
   size?: 1 | 2 | 3 | 4 | 5
@@ -14,18 +15,19 @@ export type ButtonProps = {
     | 'tertiary'
     | 'tertiary-color'
   disabled?: boolean
+  type?: 'button' | 'submit'
   onClick?: VoidFunction
-  ref?: React.Ref<HTMLButtonElement>
 }
 
 export const Button = ({
+  ref,
   children,
   className: _className,
   size = 1,
   variant = 'primary',
   disabled,
+  type = 'button',
   onClick,
-  ref,
 }: ButtonProps) => {
   const className = classNames(
     styles.button,
@@ -39,6 +41,7 @@ export const Button = ({
       ref={ref}
       disabled={disabled}
       className={className}
+      type={type}
       onClick={onClick}
     >
       {children}

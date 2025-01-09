@@ -10,7 +10,6 @@ export default {
 export const _Dropdown: StoryFn = () => {
   return (
     <>
-      <Button variant="secondary">Teste Dropdown</Button>
       <Dropdown.Container>
         <Dropdown.Trigger>
           <Button variant="secondary">Teste Dropdown</Button>

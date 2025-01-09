@@ -17,6 +17,8 @@ import Zap from './commons/Zap'
 import Menu02 from './commons/Menu02'
 import Plus from './commons/Plus'
 import DotsVertical from './commons/DotsVertical'
+import HelpCircle from './commons/HelpCircle'
+import AlertCircle from './commons/AlertCircle'
 
 const icons = {
   ['bar-chart-square-02']: BarChartSquare02,
@@ -33,6 +35,8 @@ const icons = {
   ['menu-02']: Menu02,
   ['plus']: Plus,
   ['dots-vertical']: DotsVertical,
+  ['help-circle']: HelpCircle,
+  ['alert-circle']: AlertCircle,
 }
 
 // TODO: Get from theme when it's available

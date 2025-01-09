@@ -1,5 +1,11 @@
 # @baunilha/tokens
 
+## 1.0.5
+
+### Patch Changes
+
+- Added form components
+
 ## 1.0.4
 
 ### Patch Changes

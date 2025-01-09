@@ -1,4 +1,4 @@
-import { SVGCommonProps } from './types'
+import { SVGCommonProps } from './@types'
 
 const Users01 = ({ strokeWidth }: SVGCommonProps) => {
   return (
