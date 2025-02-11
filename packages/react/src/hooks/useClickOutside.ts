@@ -3,10 +3,24 @@ import { useEffect, DependencyList } from 'react'
 export const useClickOutside = (
   callback: (event: MouseEvent) => void,
   dependencies: DependencyList = [],
-  ref: React.RefObject<HTMLElement | null>,
+  _refs:
+    | React.RefObject<HTMLElement | null>
+    | React.RefObject<HTMLElement | null>[],
 ) => {
   const handleClickOutside = (event: MouseEvent) => {
-    if (ref.current && !ref.current.contains(event.target as Node)) {
+    let refs: React.RefObject<HTMLElement | null>[]
+
+    if (!Array.isArray(_refs)) {
+      refs = [_refs]
+    } else {
+      refs = _refs
+    }
+
+    const isOutside = refs.every((ref) => {
+      return ref.current && !ref.current.contains(event.target as Node)
+    })
+
+    if (isOutside) {
       setTimeout(() => {
         callback(event)
       }, 0)
@@ -14,10 +28,10 @@ export const useClickOutside = (
   }
 
   useEffect(() => {
-    document.addEventListener('mouseup', handleClickOutside)
+    document.addEventListener('click', handleClickOutside)
 
     return () => {
-      document.removeEventListener('mouseup', handleClickOutside)
+      document.removeEventListener('click', handleClickOutside)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, dependencies)

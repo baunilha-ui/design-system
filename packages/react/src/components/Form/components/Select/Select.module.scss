@@ -1,0 +1,18 @@
+.input {
+    border: none;
+    outline: none;
+    padding: 0;
+
+    flex: 1;
+
+    color: var(--colors-text-primary);
+}
+
+.item__focused {
+    background-color: var(--colors-background-primary-hover);
+}
+
+.content {
+    max-height: 256px;
+    overflow-y: auto;
+}

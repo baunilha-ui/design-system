@@ -1,22 +1,41 @@
-import { useMemo, useRef, useState, Fragment, useCallback } from 'react'
+import {
+  useMemo,
+  useRef,
+  useState,
+  useCallback,
+  useImperativeHandle,
+} from 'react'
 import { useGetChild } from '../../hooks/useGetChild'
 import { Portal } from 'src/components/Portal/Portal'
 import { Clone } from 'src/components/Clone/Clone'
 import { usePositioning } from 'src/hooks/usePositioning'
+import { useClickOutside } from 'src/hooks/useClickOutside'
+import { DropdownProvider } from '../../providers/useDropdown'
+
+export type DropdownRef = {
+  close: () => void
+  open: () => void
+  isOpen: boolean
+}
 
 type ContainerProps = {
   children: React.ReactNode
+  onClose?: () => void
+  ref?: React.Ref<DropdownRef>
 }
 
-export const Container = ({ children }: ContainerProps) => {
+export const Container = ({ children, ref, onClose }: ContainerProps) => {
   const triggerRef = useRef<HTMLElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
 
   const [isOpen, setIsOpen] = useState(false)
 
   const handleClose = useCallback(() => {
-    if (isOpen) setIsOpen(false)
-  }, [isOpen])
+    if (isOpen) {
+      setIsOpen(false)
+      onClose?.()
+    }
+  }, [isOpen, onClose])
 
   const handleOpen = useCallback(() => {
     if (!isOpen) setIsOpen(true)
@@ -34,6 +53,26 @@ export const Container = ({ children }: ContainerProps) => {
     [isOpen],
   )
 
+  useClickOutside(
+    () => {
+      if (isOpen) handleClose()
+    },
+    [isOpen],
+    [contentRef, triggerRef],
+  )
+
+  useImperativeHandle(ref, () => {
+    return {
+      close() {
+        handleClose()
+      },
+      open() {
+        handleOpen()
+      },
+      isOpen,
+    }
+  }, [handleClose, handleOpen, isOpen])
+
   const isEmpty = useMemo(() => {
     return content?.props?.children?.filter?.((c: unknown) => !!c).length === 0
   }, [content])
@@ -41,18 +80,14 @@ export const Container = ({ children }: ContainerProps) => {
   if (isEmpty) return null
 
   return (
-    <Fragment>
-      <Clone ref={triggerRef} isOpen={isOpen} onOpen={handleOpen}>
-        {trigger}
-      </Clone>
+    <DropdownProvider isOpen={isOpen} onOpen={handleOpen} onClose={handleClose}>
+      <Clone ref={triggerRef}>{trigger}</Clone>
 
       {isOpen && (
         <Portal>
-          <Clone ref={contentRef} isOpen={isOpen} onClose={handleClose}>
-            {content}
-          </Clone>
+          <Clone ref={contentRef}>{content}</Clone>
         </Portal>
       )}
-    </Fragment>
+    </DropdownProvider>
   )
 }

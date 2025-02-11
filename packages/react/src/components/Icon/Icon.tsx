@@ -19,6 +19,8 @@ import Plus from './commons/Plus'
 import DotsVertical from './commons/DotsVertical'
 import HelpCircle from './commons/HelpCircle'
 import AlertCircle from './commons/AlertCircle'
+import Check from './commons/Check'
+import Repeat03 from './commons/Repeat03'
 
 const icons = {
   ['bar-chart-square-02']: BarChartSquare02,
@@ -28,6 +30,7 @@ const icons = {
   ['log-out-01']: LogOut01,
   ['search-lg']: SearchLg,
   ['check-circle']: CheckCircle,
+  ['check']: Check,
   ['x-close']: XClose,
   ['bell-01']: Bell01,
   ['settings-01']: Settings01,
@@ -37,35 +40,24 @@ const icons = {
   ['dots-vertical']: DotsVertical,
   ['help-circle']: HelpCircle,
   ['alert-circle']: AlertCircle,
-}
-
-// TODO: Get from theme when it's available
-const SIZES = {
-  1: 16,
-  2: 18,
-  3: 20,
-  4: 22,
-  5: 24,
+  ['repeat-03']: Repeat03,
 }
 
 export type IconKeys = keyof typeof icons
 
 export interface IconProps {
   name: IconKeys
-  size?: keyof typeof SIZES
+  size?: 1 | 2 | 3 | 4 | 5
   className?: string
 }
 
 export const Icon = ({ name, size = 5, className: _className }: IconProps) => {
   const IconByName = icons[name]
-  const sizeNumber = SIZES[size]
   const className = classNames(styles.icon, sizes[`size-${size}`], _className)
-
-  const calculatedStrokeWidth = (sizeNumber / 24) * 2
 
   return (
     <figure className={className}>
-      <IconByName strokeWidth={calculatedStrokeWidth} />
+      <IconByName strokeWidth={2} />
     </figure>
   )
 }

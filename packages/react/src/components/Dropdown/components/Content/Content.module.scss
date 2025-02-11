@@ -1,6 +1,7 @@
 .wrapper {
   --margin-default: var(--space-4);
   position: absolute;
+  z-index: 101;
 }
 
 .content {

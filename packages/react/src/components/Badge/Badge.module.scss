@@ -1,0 +1,18 @@
+.badge {
+    display: flex;
+    align-items: center;
+
+    text-align: center;
+
+    border-width: 1px;
+    border-style: solid;
+
+    font-weight: 500;
+
+    &.pill {
+        border-radius: var(--radii-99);
+    }    
+}
+
+
+

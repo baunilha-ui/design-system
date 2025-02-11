@@ -1,29 +1,24 @@
 import React from 'react'
 
-import { useClickOutside } from 'src/hooks/useClickOutside'
-
 import styles from './Content.module.scss'
+import { classNames } from 'src/utils/classNames'
 
-export interface ContentProps {
+export type ContentProps = {
   children: React.ReactNode
-  onClose?: () => void
-  isOpen?: boolean
   className?: string
   ref?: React.Ref<HTMLDivElement>
 }
 
-export const Content = ({ children, onClose, isOpen, ref }: ContentProps) => {
-  useClickOutside(
-    () => {
-      if (isOpen) onClose?.()
-    },
-    [isOpen],
-    ref as React.RefObject<HTMLElement>,
-  )
+export const Content = ({
+  children,
+  className: _className,
+  ref,
+}: ContentProps) => {
+  const className = classNames(styles.content, _className)
 
   return (
     <div ref={ref} className={styles.wrapper}>
-      <div className={styles.content}>
+      <div className={className}>
         <div className={styles.items}>{children}</div>
       </div>
     </div>

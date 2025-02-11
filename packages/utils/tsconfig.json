@@ -1,0 +1,4 @@
+{
+  "extends": "@baunilha/ts-config/base.json",
+  "include": ["src"] 
+}

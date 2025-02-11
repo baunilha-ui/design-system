@@ -2,6 +2,7 @@ import { RHFContainer } from './RHFContainer/RHFContainer'
 import { RHFError } from './RHFError/RHFError'
 import { RHFHint } from './RHFHint/RHFHint'
 import { RHFInput } from './RHFInput/RHFInput'
+import { RHFSelect } from './RHFSelect/RHFSelect'
 
 export const RHFForm = {
   // Core
@@ -11,4 +12,5 @@ export const RHFForm = {
 
   // Controls
   Input: RHFInput,
+  Select: RHFSelect,
 }

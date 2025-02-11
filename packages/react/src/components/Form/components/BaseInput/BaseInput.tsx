@@ -7,13 +7,17 @@ type BaseInputProps = {
   className?: string
   size?: 1 | 2
   hasError?: boolean
+  ref?: React.Ref<HTMLInputElement>
+  onClick?: () => void
 }
 
 export const BaseInput = ({
+  ref,
   className: _className,
   children,
   size = 1,
   hasError = false,
+  onClick,
 }: BaseInputProps) => {
   const className = classNames(
     styles.baseInput,
@@ -24,5 +28,9 @@ export const BaseInput = ({
     },
   )
 
-  return <div className={className}>{children}</div>
+  return (
+    <div ref={ref} onClick={onClick} className={className}>
+      {children}
+    </div>
+  )
 }

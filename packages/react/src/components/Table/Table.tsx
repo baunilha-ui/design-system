@@ -10,7 +10,7 @@ import { classNames } from 'src/utils/classNames'
 
 export type TableProps<Item> = {
   className?: string
-  data: Item[]
+  data?: Item[]
   keyExtractor: (item: Item) => string
   renderHeader: () => JSX.Element
   renderRow: (item: Item) => JSX.Element
@@ -50,7 +50,7 @@ export const Table = <Item extends object>({
   return (
     <div className={className} style={{ gridTemplateColumns }}>
       {header}
-      {data.map((item) => (
+      {data?.map?.((item) => (
         <Fragment key={keyExtractor(item)}>{renderRow(item)}</Fragment>
       ))}
     </div>

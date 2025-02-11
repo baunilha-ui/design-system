@@ -16,6 +16,7 @@ export type ButtonProps = {
     | 'tertiary-color'
   disabled?: boolean
   type?: 'button' | 'submit'
+  full?: boolean
   onClick?: VoidFunction
 }
 
@@ -28,12 +29,16 @@ export const Button = ({
   disabled,
   type = 'button',
   onClick,
+  full = false,
 }: ButtonProps) => {
   const className = classNames(
     styles.button,
     _className,
     sizes[`size-${size}`],
     variants[`variant-${variant}`],
+    {
+      [styles.full]: full,
+    },
   )
 
   return (

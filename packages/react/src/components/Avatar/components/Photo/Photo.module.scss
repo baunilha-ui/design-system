@@ -1,4 +1,4 @@
-.avatar {
+.photo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,4 +8,7 @@
     color: var(--colors-foreground-quaternary);
     background-color: var(--colors-components-avatar-background-default);
     border: 0.5px solid var(--colors-components-avatar-contrast-border);
+
+    color: var(--colors-foreground-quaternary);
+    font-weight: 600;
 }

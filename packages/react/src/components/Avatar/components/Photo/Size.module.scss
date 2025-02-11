@@ -1,4 +1,7 @@
 .size-1 {
+  font-size: var(--font-size-2);
+  line-height: var(--line-height-1);
+
   width: var(--space-6);
   height: var(--space-6);
 
@@ -9,6 +12,9 @@
 }
 
 .size-2 {
+  font-size: var(--font-size-3);
+  line-height: var(--line-height-2);
+
   width: var(--space-8);
   height: var(--space-8);
 
@@ -19,6 +25,9 @@
 }
 
 .size-3 {
+  font-size: var(--font-size-4);
+  line-height: var(--line-height-3);
+
   width: var(--space-10);
   height: var(--space-10);
 
@@ -29,6 +38,9 @@
 }
 
 .size-4 {
+  font-size: var(--font-size-5);
+  line-height: var(--line-height-4);
+
   width: var(--space-12);
   height: var(--space-12);
 
@@ -39,6 +51,9 @@
 }
 
 .size-5 {
+  font-size: var(--font-size-6);
+  line-height: var(--line-height-5);
+
   width: var(--space-14);
   height: var(--space-14);
 
@@ -49,6 +64,9 @@
 }
 
 .size-6 {
+  font-size: var(--font-size-7);
+  line-height: var(--line-height-6);
+
   width: var(--space-16);
   height: var(--space-16);
 

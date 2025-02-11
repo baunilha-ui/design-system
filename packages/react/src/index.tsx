@@ -15,5 +15,10 @@ export type { IconProps, IconKeys } from './components/Icon/Icon'
 export { Icon } from './components/Icon/Icon'
 
 // Avatar
-export type { AvatarProps } from './components/Avatar/Avatar'
 export { Avatar } from './components/Avatar/Avatar'
+
+export type { BadgeProps } from './components/Badge/Badge'
+export { Badge } from './components/Badge/Badge'
+
+// Utils
+export { classNames } from './utils/classNames'

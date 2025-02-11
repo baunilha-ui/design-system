@@ -1,5 +1,6 @@
 import React from 'react'
 import { Clone } from 'src/components/Clone/Clone'
+import { useDropdown } from '../../providers/useDropdown'
 
 export interface TriggerProps {
   children: React.ReactNode
@@ -9,7 +10,9 @@ export interface TriggerProps {
   isOpen?: boolean
 }
 
-export const Trigger = ({ children, onOpen, isOpen, ref }: TriggerProps) => {
+export const Trigger = ({ children, ref }: TriggerProps) => {
+  const { isOpen, onOpen } = useDropdown()
+
   return (
     <Clone ref={ref} isOpen={isOpen} onClick={onOpen}>
       {children}
