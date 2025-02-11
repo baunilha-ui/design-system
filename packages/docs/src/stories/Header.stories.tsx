@@ -29,7 +29,7 @@ export default {
               <Icon name="bell-01" size={3} />
             </Header.IconButton>
           </Header.Actions>
-          <Avatar size={3} />
+          <Avatar.Photo size={3} />
         </Header.Content>
       </>
     ),
