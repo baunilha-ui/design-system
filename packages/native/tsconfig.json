@@ -1,0 +1,8 @@
+{
+  "extends": "@baunilha/ts-config/native.json",
+  "include": ["src/types/styled.d.ts", "src"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": ["react", "react-native", "styled-components-react-native"]
+  }
+}

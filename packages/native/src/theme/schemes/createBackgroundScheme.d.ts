@@ -1,0 +1,34 @@
+import { BaseTheme } from "../../constants/theme";
+export type BackgroundScheme = {
+    primary: string;
+    primary_alt: string;
+    primarySolid: string;
+    secondary: string;
+    secondary_alt: string;
+    secondary_subtle: string;
+    secondarySolid: string;
+    tertiary: string;
+    quaternary: string;
+    active: string;
+    disabled: string;
+    disabled_subtle: string;
+    overlay: string;
+    brandPrimary: string;
+    brandPrimary_alt: string;
+    brandSecondary: string;
+    brandSolid: string;
+    brandSection: string;
+    brandSection_subtle: string;
+    errorPrimary: string;
+    errorSecondary: string;
+    errorSolid: string;
+    warningPrimary: string;
+    warningSecondary: string;
+    warningSolid: string;
+    successPrimary: string;
+    successSecondary: string;
+    successSolid: string;
+};
+export declare const createLightBackgroundScheme: (theme: BaseTheme) => BackgroundScheme;
+export declare const createDarkBackgroundScheme: (theme: BaseTheme) => BackgroundScheme;
+//# sourceMappingURL=createBackgroundScheme.d.ts.map
