@@ -5,6 +5,7 @@ import { ComponentPropsProvider } from "../../providers/ComponentPropsProvider";
 import { Container } from "./styles";
 import { BadgeSizes, BadgeColors, BadgeVariants, BadgeType } from "./types";
 import { FontSizeKeys } from "../../constants/theme";
+import React from "react";
 
 export interface BadgeProps {
   size?: BadgeSizes;
@@ -21,7 +22,6 @@ export const Badge = ({
   type = "default",
   variant = "fill",
 }: BadgeProps) => {
-  const shouldShowStore = useMemo()
   const textSize: FontSizeKeys = size === 1 ? "2" : "3";
   const isOutline = variant === "outline";
   return (

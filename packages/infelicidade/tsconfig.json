@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "types": ["styled-components-react-native"]
+  },
+  "include": ["src/styled-components.d.ts"]
+}

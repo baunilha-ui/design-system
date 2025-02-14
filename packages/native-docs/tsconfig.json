@@ -1,7 +1,0 @@
-{
-  "extends": "@baunilha/ts-config/react.json",
-  "include": ["src"],
-  "compilerOptions": {
-    "moduleResolution": "Bundler",
-  }
-}

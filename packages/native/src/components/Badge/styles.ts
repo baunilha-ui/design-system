@@ -1,4 +1,4 @@
-import styled from "styled-components/native";
+import styled, { DefaultTheme } from "styled-components/native";
 import { getBadgeColors } from "./Colors";
 import { getBadgePadding, getBadgeRadius } from "./Spacing";
 import { BadgeSizes, BadgeColors, BadgeVariants, BadgeType } from "./types";
@@ -8,6 +8,7 @@ interface BadgeContainerProps {
   color: BadgeColors;
   variant: BadgeVariants;
   type: BadgeType;
+  theme: DefaultTheme;
 }
 
 export const Container = styled.View<BadgeContainerProps>`

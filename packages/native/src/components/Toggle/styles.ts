@@ -28,6 +28,6 @@ export const Track = styled(Animated.View)<ToggleProps>`
   border-radius: ${({ theme }) => theme.borderRadius[3]};
 
   padding: ${({ theme }) => theme.space[0.5]};
-  
+
   ${getTrackSpacingStyles}
 `;
