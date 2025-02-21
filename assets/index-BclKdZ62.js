@@ -1,0 +1,1 @@
+var c=r=>r.replace(/[A-Z]/g,e=>`-${e.toLowerCase()}`),n=(r,e="-")=>Object.entries(r).reduce((t,[o,a])=>{const s=c(o).replace(/\./g,"_");return typeof a=="object"?{...t,...n(a,`${e}-${s}`)}:{...t,[`${e}-${s}`]:a}},{});export{n as c};
