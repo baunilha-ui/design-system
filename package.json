@@ -14,9 +14,6 @@
     "version-packages": "changeset version",
     "release": "turbo run build --filter=!@baunilha/docs & changeset publish"
   },
-  "packageManager": "npm@8.5.0",
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  }
+  "packageManager": "npm@8.5.0"
+  
 }
