@@ -1,5 +1,11 @@
 # @baunilha/react
 
+## 3.0.0
+
+### Major Changes
+
+- Added cli on tokens and change cli from react
+
 ## 2.0.2
 
 ### Patch Changes
@@ -15,6 +21,11 @@
 - Add initial native components support
 - Updated dependencies
   - @baunilha/tokens@1.0.6
+
+### Patch Changes
+
+- Updated dependencies
+  - @baunilha/tokens@2.0.0
 
 ## 2.0.0
 

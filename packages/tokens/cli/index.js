@@ -6,9 +6,9 @@ const args = process.argv.slice(2)
 const help = `
   Uso:
   
-    npx baunilha-react init          -  Gera o arquivo de configurações
+    npx baunilha init          -  Gera o arquivo de configurações
 
-    npx baunilha-react generate      -  Gera o arquivo de variáveis
+    npx baunilha generate      -  Gera o arquivo de variáveis
 
   Exemplos:
 

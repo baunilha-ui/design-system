@@ -1,5 +1,11 @@
 # @baunilha/tokens
 
+## 2.0.0
+
+### Major Changes
+
+- Added cli on tokens and change cli from react
+
 ## 1.0.7
 
 ### Patch Changes

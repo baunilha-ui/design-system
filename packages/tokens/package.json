@@ -1,17 +1,22 @@
 {
   "name": "@baunilha/tokens",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "cli",
+    "tsup.config.ts"
   ],
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
     "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
     "lint": "eslint src/**/*.ts* --fix"
+  },
+  "bin": {
+    "baunilha": "./cli/index.js"
   },
   "keywords": [],
   "author": "",
