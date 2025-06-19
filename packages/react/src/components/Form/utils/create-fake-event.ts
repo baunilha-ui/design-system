@@ -1,5 +1,5 @@
 type CreateFakeEvent = {
-  value: string
+  value: any
   name: string
   type?: 'change' | 'blur'
 }

@@ -9,6 +9,7 @@ type BaseInputProps = {
   hasError?: boolean
   ref?: React.Ref<HTMLInputElement>
   onClick?: () => void
+  multiline?: boolean
 }
 
 export const BaseInput = ({
@@ -18,12 +19,14 @@ export const BaseInput = ({
   size = 1,
   hasError = false,
   onClick,
+  multiline = false,
 }: BaseInputProps) => {
   const className = classNames(
     styles.baseInput,
-    _className,
     sizes[`size-${size}`],
+    _className,
     {
+      [sizes.multiline]: multiline,
       [styles.hasError]: hasError,
     },
   )

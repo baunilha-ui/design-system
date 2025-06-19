@@ -1,5 +1,17 @@
 # @baunilha/react
 
+## 3.1.1
+
+### Patch Changes
+
+- Added types
+
+## 3.1.0
+
+### Minor Changes
+
+- Added more components
+
 ## 3.0.0
 
 ### Major Changes

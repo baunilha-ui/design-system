@@ -9,6 +9,7 @@ import { Hint } from './components/Hint/Hint'
 // Controls
 import { MemoizedInput } from './components/Input/Input'
 import { MemoizedSelect } from './components/Select/Select'
+import { MemoizedFile } from './components/File/File'
 
 export const Form = {
   // Core
@@ -22,4 +23,5 @@ export const Form = {
   // Controls
   Input: MemoizedInput,
   Select: MemoizedSelect,
+  File: MemoizedFile
 }

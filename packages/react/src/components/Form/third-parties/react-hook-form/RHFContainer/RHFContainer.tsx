@@ -1,11 +1,10 @@
 import { FieldValues, FormProvider, UseFormReturn } from 'react-hook-form'
 import { Form } from '../../../Form'
 
-type RHFForm<Data extends FieldValues = FieldValues> = UseFormReturn<Data>
 
 type RHFContainerProps<Data extends FieldValues = FieldValues> = {
   children: React.ReactNode
-  form: RHFForm<Data>
+  form: any // It's not working with UseFormReturn<Data>, so using any for now
   onSubmit: (data: Data) => void
   className?: string
 }
@@ -16,7 +15,7 @@ export const RHFContainer = <Data extends FieldValues = FieldValues>({
   onSubmit,
   className,
 }: RHFContainerProps<Data>) => {
-  const { handleSubmit } = form
+  const { handleSubmit } = form as UseFormReturn<Data>
 
   return (
     <FormProvider {...form}>

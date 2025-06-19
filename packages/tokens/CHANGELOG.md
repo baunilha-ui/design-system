@@ -1,5 +1,11 @@
 # @baunilha/tokens
 
+## 2.0.1
+
+### Patch Changes
+
+- Added typefiles
+
 ## 2.0.0
 
 ### Major Changes

@@ -1,5 +1,11 @@
 # @baunilha/utils
 
+## 2.0.3
+
+### Patch Changes
+
+- Added typefiles
+
 ## 2.0.2
 
 ### Patch Changes
