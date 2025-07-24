@@ -32,7 +32,9 @@ export const Item = ({
     _className,
   )
 
-  const handleOnClick = () => {
+  const handleOnClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.stopPropagation()
+    
     if (!!onClick) {
       if (shouldCloseOnClick) onClose()
       onClick()

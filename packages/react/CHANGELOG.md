@@ -1,5 +1,11 @@
 # @baunilha/react
 
+## 3.1.2
+
+### Patch Changes
+
+- Added danger variant
+
 ## 3.1.1
 
 ### Patch Changes

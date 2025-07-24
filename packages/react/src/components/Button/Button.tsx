@@ -14,10 +14,11 @@ export type ButtonProps = {
     | 'secondary-color'
     | 'tertiary'
     | 'tertiary-color'
+    | 'danger'
   disabled?: boolean
   type?: 'button' | 'submit'
   full?: boolean
-  onClick?: VoidFunction
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 export const Button = ({
