@@ -2,6 +2,13 @@
   "name": "@baunilha/native",
   "version": "0.0.1",
   "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "tsup.config.ts"
+  ],
   "scripts": {
     "_build": "tsup src/index.tsx --format esm,cjs --dts --external react",
     "_dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch",
